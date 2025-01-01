@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إدارة الغياب</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            direction: rtl;
+            background-color: rgb(255, 255, 255);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header img {
+            max-width: 100%;
+            height: auto;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* توسيط الأزرار عموديًا */
+            align-items: center; /* توسيط الأزرار أفقيًا */
+            max-width: 300px;
+            background-color: hsl(195, 84%, 53%);
+            padding: 40px;
+            border-radius: 8px;
+            margin: auto;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 12px;
+            background-color: hsl(98, 74%, 45%);
+            color: #111010;
+            border: 2px solid #111010; /* إضافة الحدود */
+            cursor: pointer;
+            border-radius: 4px;
+            width: 90%;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin: 10px 0;
+        }
+        button:hover {
+            background-color: #f1a470;
+        }
+        button:active {
+            transform: scale(0.95);
+        }
+        #exitButton {
+            background-color: red;
+        }
+        #exitButton:hover {
+            background-color: darkred;
+        }
+        #attendanceOfficerButton {
+            background-color: yellow;
+        }
+        #attendanceOfficerButton:hover {
+            background-color: orange;
+        }
+        #registerAbsenceButton {
+            background-color: hsl(133, 63%, 41%);
+            color: white;
+        }
+        #registerAbsenceButton:hover {
+            background-color: #95ebb6;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="9999.png" alt="Logo" style="max-height: 100px;">
+        <h1 style="font-size: 40px; font-weight: bold;">تسجيل الغياب</h1>
+    </div>
+
+    <form>
+        <button type="button" id="registerAbsenceButton">تسجيل الغياب</button>
+        <button type="button" id="attendanceOfficerButton">خاص مسئول الغياب</button>
+        <button type="button" id="exitButton" onclick="window.close();">خروج</button>
+    </form>
+
+    <script>
+        document.getElementById('attendanceOfficerButton').addEventListener('click', function() {
+            const password = prompt("يرجى إدخال كلمة المرور:");
+
+            if (password === "77778888") { // استبدل "77778888" بكلمة المرور المطلوبة
+                window.location.href = "https://script.google.com/macros/s/AKfycby4Fm20B3C40kA0UO-dDhP-M-h2ZmMVPohYCHEQF-F5irDctPUrW-szzI60FsHAPsZs/exec";
+            } else {
+                alert("كلمة المرور غير صحيحة.");
+            }
+        });
+
+        document.getElementById('registerAbsenceButton').addEventListener('click', function() {
+            window.location.href = "https://script.google.com/macros/s/AKfycbxkLEzGWMLqiRuWMyDXpNveODRLUMllQ0QwyXWE-TXziWXvam_a65i5Py9UZqurMb9oog/exec";
+        });
+    </script>
+</body>
+</html>
